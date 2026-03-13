@@ -1,0 +1,35 @@
+# LLM 配置
+llm:
+  # 提供商：openai / anthropic / local
+  provider: openai
+  
+  # 模型名称
+  model: gpt-3.5-turbo
+  
+  # API Key（请复制此文件为 config.yaml 并填入真实 Key）
+  api_key: your_api_key_here
+  
+  # API 基础 URL（可选，用于自定义端点或本地服务）
+  api_base: null
+  
+  # 生成参数
+  temperature: 0.3
+  max_tokens: 1500
+  max_content_length: 8000
+  
+  # 提示词模板（可选，使用默认则注释掉）
+  # prompt_template: |
+  #   请对以下文章内容进行整理分析...
+  #   文章内容：
+  #   {content}
+
+# 目录配置
+directories:
+  output: output
+  summary: summary
+
+# 抓取配置
+scraper:
+  request_delay: 1
+  timeout: 15
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
